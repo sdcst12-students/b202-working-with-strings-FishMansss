@@ -16,7 +16,8 @@ def replaceDog(input):
     str - the modified string
     '''
     modifiedString = input
-
+    modifiedString.index("dog") = x
+    print(x)
     return modifiedString
 
 
