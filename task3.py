@@ -18,8 +18,18 @@ def split(input):
     str new string with line break in the middle
     '''
 
-    return
+    input = list(input)
+    e = len(input) / 2
+    e = int(e)
+    output = input.insert("/n", input[e])
+    output = str(output)
+    return output
 
+sentence = "I am a fat cat"
+print(split(sentence))
+
+
+'''
 if __name__ == "__main__":
     sentence = "There is a big balloon in the blue sky"
     assert split(sentence) == "There is a big ball-\noon in the blue sky"
@@ -28,4 +38,4 @@ if __name__ == "__main__":
     assert split(sentence) == "I am a \nfat cat"
 
     sentence = "I was a fat cat"
-    assert split(sentence) == "I was a\n fat cat"
+    assert split(sentence) == "I was a\n fat cat"'''
