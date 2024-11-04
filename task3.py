@@ -18,14 +18,18 @@ def split(input):
     str new string with line break in the middle
     '''
 
-    input = list(input)
+    
     e = len(input) / 2
     e = int(e)
-    output = input.insert("/n", input[e])
-    output = str(output)
-    return output
+    
+    if input[e-1] ==  " ":
+        output =  input[:e] + "/n" + input[e:]
+        return output
+    else: 
+        output =  input[:e] + "-/n" + input[e:]
+        return output
 
-sentence = "I am a fat cat"
+sentence = "There is a big balloon in the blue sky"
 print(split(sentence))
 
 
